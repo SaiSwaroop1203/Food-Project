@@ -7,9 +7,16 @@ def index(request):
     item_list = Item.objects.all()
     template = loader.get_template('food/index.html')
     context = {
-
+        'item_list':item_list,
     }
     return HttpResponse(template.render(context,request))
+
+# def index(request):
+#     item_list = Item.objects.all()
+#     context = {
+#         'item_list':item_list,
+#     }
+#     return render(request, 'food/index.html', context)
 
 def item(request):
     return HttpResponse('This is an item') # we can use html tags as well ex: <h2>'This is an item'</h2>

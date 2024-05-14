@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+<!-- <!DOCTYPE html>
 <html lang="en">
 
 <head>
@@ -12,4 +12,12 @@
     <h1>This is just a template</h1>
 </body>
 
-</html>
+</html> -->
+
+{% for item in item_list %}
+<ul>
+    <li>
+        {{item.id}} -- {{item.item_name}} -- {{item.item_price}}
+    </li>
+</ul>
+{% endfor %}
